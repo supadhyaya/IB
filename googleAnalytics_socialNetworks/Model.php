@@ -6,9 +6,6 @@ require_once('/opt/database-migration/current/googleAnalytics_socialNetworks/gap
 
 class Model {
 
-	
-	
-/// -----------------------------------------------------------------------Get Shares
    function getShares() {
 
   	 $myquery = "SELECT fullurl FROM url_table";
@@ -54,7 +51,7 @@ class Model {
       }
 	  }
 
-/// ------------------------------------------------------------------Google Analytics - VOYCER
+
 	function get_analyticsdata(){
 	
 	
@@ -71,7 +68,7 @@ class Model {
 	'newVisits','pageviews','avgTimeOnPage','visitBounceRate'),'-pagePath',$filter);
 	$gReferrals->requestReportData(ga_profile_id_voycer,array('pagePath','fullReferrer','deviceCategory','hostname'),array('visits'),'-pagePath',$filter);
 
-/// ------------------------------Visits	
+	
 	foreach($gVisits->getResults() as $result):
 	
 	$pagepath = mysql_real_escape_string($result->getPagePath());
@@ -88,7 +85,7 @@ class Model {
 	$dosocialquery = mysql_query($mysocialquery) or die(mysql_error());
 	endforeach;
 	  
-/// ------------------------------Referrals_device		
+		
 	foreach($gReferrals->getResults() as $result2):
 	$pagepath = mysql_real_escape_string($result2->getPagePath());
 	$fullReferrer = mysql_real_escape_string($result2->getFullReferrer());
@@ -102,7 +99,7 @@ class Model {
 	}
 	}
 
-/// ------------------------------------------------------------------Google Analytics - SIXX COMMUNITY
+
 	function get_analyticsdata_sixx(){
 	
 	$gVisits = new gapi(ga_email_sixx,ga_password_sixx);
@@ -119,7 +116,7 @@ class Model {
 	'newVisits','pageviews','avgTimeOnPage','visitBounceRate'),'-pagePath',$filter);
 	$gReferrals->requestReportData(ga_profile_id_sixx,array('pagePath','fullReferrer','deviceCategory','hostname'),array('visits'),'-pagePath',$filter);
 
-/// ------------------------------Visits	
+
 	foreach($gVisits->getResults() as $result):
 	
 	$pagepath = mysql_real_escape_string($result->getPagePath());
@@ -136,7 +133,7 @@ class Model {
 	$dosocialquery = mysql_query($mysocialquery) or die(mysql_error());
 	endforeach;
 	  
-/// ------------------------------Referrals_device		
+		
 	foreach($gReferrals->getResults() as $result2):
 	$pagepath = mysql_real_escape_string($result2->getPagePath());
 	$fullReferrer = mysql_real_escape_string($result2->getFullReferrer());
@@ -149,7 +146,7 @@ class Model {
 	  endforeach;
 	}
 	}
-/// ------------------------------------------------------------------Google Analytics - FITFORFUN COMMUNITY
+
 	function get_analyticsdata_fitforfun(){
 
 	$gVisits = new gapi(ga_email_fitforfun,ga_password_fitforfun);
@@ -166,7 +163,7 @@ class Model {
 	'newVisits','pageviews','avgTimeOnPage','visitBounceRate'),'-pagePath',$filter);
 	$gReferrals->requestReportData(ga_profile_id_fitforfun,array('pagePath','fullReferrer','deviceCategory','hostname'),array('visits'),'-pagePath',$filter);
 
-/// ------------------------------Visits	
+	
 	foreach($gVisits->getResults() as $result):
 	
 	$pagepath = mysql_real_escape_string($result->getPagePath());
@@ -183,7 +180,7 @@ class Model {
 	$dosocialquery = mysql_query($mysocialquery) or die(mysql_error());
 	endforeach;
 	  
-/// ------------------------------Referrals_device		
+		
 	foreach($gReferrals->getResults() as $result2):
 	$pagepath = mysql_real_escape_string($result2->getPagePath());
 	$fullReferrer = mysql_real_escape_string($result2->getFullReferrer());
@@ -196,7 +193,7 @@ class Model {
 	  endforeach;
 	}
 	}
-// /// ------------------------------------------------------------------Google Analytics - MMI COMMUNITY
+
 	function get_analyticsdata_mmi(){
 
 	$gVisits = new gapi(ga_email_mmi,ga_password_mmi);
@@ -212,8 +209,7 @@ class Model {
 	$gVisits->requestReportData(ga_profile_id_mmi,array('pagePath','hostname'),array('visits','visitors',
 	'newVisits','pageviews','avgTimeOnPage','visitBounceRate'),'-pagePath',$filter);
 	$gReferrals->requestReportData(ga_profile_id_mmi,array('pagePath','fullReferrer','deviceCategory','hostname'),array('visits'),'-pagePath',$filter);
-
-/// ------------------------------Visits	
+	
 	foreach($gVisits->getResults() as $result):
 	
 	$pagepath = mysql_real_escape_string($result->getPagePath());
@@ -230,7 +226,7 @@ class Model {
 	$dosocialquery = mysql_query($mysocialquery) or die(mysql_error());
 	endforeach;
 	  
-/// ------------------------------Referrals_device		
+		
 	foreach($gReferrals->getResults() as $result2):
 	$pagepath = mysql_real_escape_string($result2->getPagePath());
 	$fullReferrer = mysql_real_escape_string($result2->getFullReferrer());
@@ -243,7 +239,7 @@ class Model {
 	  endforeach;
 	}
 	}
-// /// ------------------------------------------------------------------Google Analytics - CONNECT COMMUNITY
+
 	function get_analyticsdata_connect(){
 
 	$gVisits = new gapi(ga_email_connect,ga_password_connect);
@@ -260,7 +256,7 @@ class Model {
 	'newVisits','pageviews','avgTimeOnPage','visitBounceRate'),'-pagePath',$filter);
 	$gReferrals->requestReportData(ga_profile_id_connect,array('pagePath','fullReferrer','deviceCategory','hostname'),array('visits'),'-pagePath',$filter);
 
-/// ------------------------------Visits	
+	
 	foreach($gVisits->getResults() as $result):
 	
 	$pagepath = mysql_real_escape_string($result->getPagePath());
@@ -277,7 +273,7 @@ class Model {
 	$dosocialquery = mysql_query($mysocialquery) or die(mysql_error());
 	endforeach;
 	  
-/// ------------------------------Referrals_device		
+		
 	foreach($gReferrals->getResults() as $result2):
 	$pagepath = mysql_real_escape_string($result2->getPagePath());
 	$fullReferrer = mysql_real_escape_string($result2->getFullReferrer());
