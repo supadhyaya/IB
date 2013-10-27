@@ -1,8 +1,5 @@
-#!/usr/bin/php5
+
 <?php
-
-// put this file in the php folder , then only it will be executed..
-
 // http://www.9lessons.info/2013/01/mongodb-php-tutorial.html >> resource
 
 echo 'ETL started... get ready for visualization '."\n";
@@ -102,10 +99,6 @@ exec($Userquery,
 $output, $ret);
 var_dump($output, $ret); 
 
-echo $beginDate."\n";
-echo $endDate."\n";
-// echo $TagQuery;
-
 
 try  
 {  
@@ -115,7 +108,7 @@ $sp="mysql  < ".$srcdir."sp/JSONArraySplitter.sql";
 exec($sp,$out,$retval);
 
 
-// Run the files in extraction
+// Run the files in sequence
 $answer_Extract="mysql < ".$srcdir."extract/answer_Extract.sql";
 exec($answer_Extract,$out,$retval);
 
