@@ -12,11 +12,6 @@ $m = new MongoClient(); // connect
 $db = $m->selectDB("socialvoyce");
 
 
-
-// $user ='bi';
-// $password='rQIWWMIIcwjekCV9yEjU';
-// $database ='socialvoyce';
-
 $user ='';
 $password='';
 $database ='socialvoyce';
@@ -187,8 +182,8 @@ include("/opt/database-migration/current/googleAnalytics_socialNetworks/index.ph
 
 echo "GA finished "."\n";
 
-// $googleAnalytics_Extract_Trans="mysql < ".$srcdir."transformation/googleAnalytics_Extract_Trans.sql";
-// exec($googleAnalytics_Extract_Trans,$out,$retval);
+$googleAnalytics_Extract_Trans="mysql < ".$srcdir."transformation/googleAnalytics_Extract_Trans.sql";
+exec($googleAnalytics_Extract_Trans,$out,$retval);
 
 
 $social_Trans="mysql  < ".$srcdir."transformation/social_Trans.sql";
