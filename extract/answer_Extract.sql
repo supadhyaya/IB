@@ -1,4 +1,3 @@
-
 use socialvoyce;
 
 drop table if exists initialAnswer;
@@ -56,8 +55,6 @@ ltrim(rtrim(replace(replace(answerID,'$oid" : "',''),'"',''))) as answerID,
 ltrim(rtrim(replace(replace(answerText,'"text" : "',''),'"',''))) as answerText,
 ltrim(rtrim(CHAR_LENGTH(vote)-CHAR_LENGTH(REPLACE(vote, '"_id"', '|}}|')))) as  votes
 from answerPass2;
-
--- SELECT CHAR_LENGTH(vote)-CHAR_LENGTH(REPLACE(vote, '"_id"', '|}}|')) +1 ,answerID from answerPass2
 
 
 delete from scrubAnswer where answerID='';
