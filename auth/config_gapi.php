@@ -1,6 +1,6 @@
 <?php
 require ('/opt/database-migration/current/googleAnalytics_socialNetworks/gapi.class.php');
-	
+// testing the git 	
 //GAPI Account Login Details 
 	
 	define('ga_email_voycer','abc@gmail.com');
