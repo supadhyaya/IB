@@ -2,7 +2,7 @@
 define('SQL_HOST','localhost');
 define('SQL_USER','bi'); 
 
-define('SQL_PASS','rQIWWMIIcwjekCV9yEjU'); 
+define('SQL_PASS','xyz'); 
 
 define('SQL_DB','socialvoyce'); 
 
