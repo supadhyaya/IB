@@ -1,3 +1,0 @@
-Process to rebase:
-1. Create new file in the master branch
-2. Push that changes to the master 
